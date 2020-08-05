@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_blue_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="#ffffff"
+        android:textSize="18dp"
+        android:textColor="#333333"
+        android:text="充值中心"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                android:clipChildren="false"
+                android:fitsSystemWindows="true">
+
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <!--   头部信息-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:background="#FFB6C1"
+                        android:gravity="center"
+                        android:text="充值特权 多冲多送"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+                <FrameLayout
+                    android:background="#FFB6C1"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <View
+                        android:layout_marginTop="22dp"
+                        android:background="@drawable/shape_blue_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/fl_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/shape_white_10" >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/tab_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>
