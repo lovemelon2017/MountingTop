@@ -42,11 +42,12 @@
 
                     <!--   头部信息-->
                     <TextView
+                        android:id="@+id/to_mall"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:background="#FFB6C1"
                         android:gravity="center"
-                        android:text="充值特权 多冲多送"
+                        android:text="淘宝规格 测试"
                         android:textColor="#fff"
                         android:textSize="20dp"
                         android:textStyle="bold" />

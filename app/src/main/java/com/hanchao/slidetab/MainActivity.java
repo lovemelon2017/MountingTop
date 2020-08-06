@@ -12,10 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blankj.utilcode.util.ActivityUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.android.material.appbar.AppBarLayout;
 import com.hanchao.slidetab.lisener.AppBarStateChangeListener;
 import com.hanchao.slidetab.lisener.HomeDataBean;
+import com.hanchao.slidetab.mall.MallActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +71,17 @@ public class MainActivity extends AppCompatActivity {
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 Log.e("han", "rv滑动==" + dy);
+            }
+        });
+
+        /**
+         * 去淘宝规格
+         *
+         */
+        findViewById(R.id.to_mall).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtils.startActivity(MallActivity.class);
             }
         });
 
@@ -166,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) flContainer.getLayoutParams();
         if (!isFull) {
-            layoutParams.setMargins(dip2px(15),0, dip2px(15), 0);
+            layoutParams.setMargins(dip2px(15), 0, dip2px(15), 0);
             flContainer.setLayoutParams(layoutParams);
             flContainer.setBackgroundResource(R.drawable.shape_white_10);
             resetRvTab();
